@@ -1,0 +1,134 @@
+* {
+    font-family: 'Karla', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    
+    font-size: 16px;
+    background-color: hsl(204, 43%, 93%);
+}
+
+.card {
+    box-sizing: border-box;
+    margin: 50px auto;
+    width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-areas: 
+        'header header'
+        'aside main'
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1.3fr;
+}
+
+header {
+    grid-area: header;
+    background-color: white;
+    padding: 46px 39px;
+}
+
+main {
+    grid-area: main;
+    background-color: #4ABEBD;
+    padding: 46px 39px;
+}
+
+main h2 {
+    color: white;
+}
+
+aside {
+    grid-area: aside;
+    background-color: hsl(179, 62%, 43%);
+    padding: 46px 39px;
+}
+
+aside p, h3, button {
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+.clcyan {
+    color: hsl(179, 62%, 43%);
+}
+
+.brg-yellow {
+    color: hsl(71, 73%, 54%);
+}
+
+.gray-blue {
+    color: hsl(218, 22%, 67%)
+}
+
+.lgh-gray {
+    color: hsl(204, 43%, 93%);
+}
+
+li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+button {
+    font-weight: bolder;
+    margin-top: 30px;
+    height: 46px;
+    width: 236px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+strong {
+    font-size: 30px;
+    color: white;
+}
+
+@media (max-width:665px) {
+    .card {
+        /* box-sizing: border-box;*/
+        margin: 70px 30px; 
+        width: auto;
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display: grid; */ 
+        grid-template-areas: 
+            'header'
+            'aside'
+            'main'
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    main {
+        grid-area: main;
+    }
+}
